@@ -1,7 +1,56 @@
+/* Register Font Family */
+@font-face {
+    font-family: "iransans";
+    src: url('../font/iransans.eot');
+    /* IE9 Compat Modes */
+    src: url('../font/iransans.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../font/iransans.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../font/iransans.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../font/iransansr.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../font/iransans.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+    font-weight: 200;
+}
+
+/* Kit Styles */
+:root {
+    /* --color-primary: #1D2125;
+    --color-second: #CD9300;
+    --hover-primary: #1D2125;
+    --hover-second: #CD9300;
+     */
+}
+
+/* Global Styles */
+* {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+html {
+    font-family: "iransans";
+    font-size: 16px;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "iransans";
+    font-size: 16px;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
 .fourmind {
     width: 100%;
     height: 100%;
-    min-height: 100vh;
     background-image: url(../img/background.png);
     background-size: cover;
     background-position: center center;
@@ -17,6 +66,171 @@
 }
 
 .fourmind .column {
-    min-height: 100px;
-    background-color: red;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.swiper {
+    width: 100%;
+    max-width: 100vw;
+    height: 100%;
+    max-height: 100vh;
+    z-index: 1;
+}
+
+.swiper-wrapper {}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 768px;
+    height: 100%;
+    max-height: 640px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    /* background: #ffffff30; */
+}
+
+.primary-desc {
+    width: 80%;
+    display: block;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.primary-slogan {
+    width: 80%;
+    display: block;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.btn-start {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 900;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #333333;
+    border-radius: 8px;
+    padding: 10px 40px;
+}
+
+.btn-start:hover {
+    color: #FFFFFF;
+    background-color: #141414;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #FFFFFF;
+    background-color: transparent;
+    margin-top: 10px!important;
+}
+
+.swiper-pagination-bullet-active {
+    position: relative;
+    background-color: #FFFFFF;
+}
+
+.swiper-pagination-bullet-active::after {
+    content: "";
+    width: 25px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: -35px;
+    background-color: #FFFFFF;
+}
+
+.swiper-pagination-bullet-active::before {
+    content: attr(data-before);
+    width: 100%;
+    min-width: max-content;
+    position: absolute;
+    top: -50%;
+    right: 60px;
+    transform: translate(0px, 3px);
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 30px;
+    text-align: right;
+    color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+.logo-desktop {
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 0;
+}
+
+.logo-desktop img {
+    width: auto;
+    max-width: 127px;
+    height: auto;
 }
