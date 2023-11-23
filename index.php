@@ -27,11 +27,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 column">
+                    <!-- Slider main container -->
                     <div class="swiper fourmindSwiper">
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper">
                         <!-- Slides -->
-                            <div class="swiper-slide" data-bullet="خانه">
+                            <div class="swiper-slide main-slide" data-bullet="خانه">
                                 <div class="main-container">
                                     <h2 class="primary-desc">
                                         مهمترین تصمیمات زندگیِ شخصی و کاریِ تو، ربطی به چیزهایی که میدونی نداره. ربط به نحوه ی فکر کردنت داره. اینکه در لحظه چطور کنترل افکار و احساساتت رو داری انتخاب های آگاهانه ی تو رو مشخص میکنه.
@@ -47,29 +48,38 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="swiper-slide" data-bullet="کارگاه‌ها">
+                            <div class="swiper-slide main-slide" data-hash="two" data-bullet="کارگاه‌ها">
+                                <div class="main-container">
+                                    <!-- Slider inside container -->
+                                    <div class="swiper cardSwiper">
+                                        <div class="swiper-wrapper">
+                                            <?php
+                                                for( $i = 0; $i < 10 ; $i++ ) { 
+                                                    include dirname(__FILE__) . '/components/card.php';
+                                                }
+                                            ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide main-slide" data-bullet="فرم تماس">
                                 <div class="main-container">
 
                                 </div>
                             </div>
-                            <div class="swiper-slide" data-bullet="فرم تماس">
-                                <div class="main-container">
-
-                                </div>
-                            </div>
-                            <div class="swiper-slide" data-bullet="فرم سوالات">
+                            <div class="swiper-slide main-slide" data-bullet="فرم سوالات">
                                 <div class="main-container">
 
                                 </div>
                             
                             </div>
-                            <div class="swiper-slide" data-bullet="هزینه">
+                            <div class="swiper-slide main-slide" data-bullet="هزینه">
                                 <div class="main-container">
 
                                 </div>
                             
                             </div>
-                            <div class="swiper-slide" data-hash="success" data-bullet="تایید نهایی">
+                            <div class="swiper-slide main-slide" data-hash="success" data-bullet="تایید نهایی">
                                 <div class="main-container">
 
                                 </div>
