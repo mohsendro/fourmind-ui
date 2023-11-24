@@ -18,13 +18,35 @@ var swiper = new Swiper(".fourmindSwiper", {
                 bulletContent.setAttribute('data-before', currentSlide);
             }
 
-            // Next Slider By btn-register Button
-            let btnregister = document.querySelector('.btn-start');
-            btnregister.addEventListener('click', () => {
+            // Next Slider By btn-start Button
+            let btnStart = document.querySelector('.btn-start');
+            btnStart.addEventListener('click', () => {
                 swiper.slideNext();
             });
 
-            // Next Slider By btn-start Button
+            // Next Slider By btn-register Button
+            let btnRegister = document.querySelectorAll('.btn-register');
+            btnRegister.forEach((e) => {
+                e.addEventListener("click", () => {
+                    let courseID = e.getAttribute("data-courseID");
+                    setCourseID(courseID);
+                    swiper.slideNext();
+                });
+            });
+
+            // Next && Prev Slider By btn-prev && btn-next Button
+            let btnNext = document.querySelectorAll('.btn-next');
+            let btnPrev = document.querySelectorAll('.btn-prev');
+            btnNext.forEach((e) => {
+                e.addEventListener("click", () => {
+                    swiper.slideNext();
+                });
+            });
+            btnPrev.forEach((e) => {
+                e.addEventListener("click", () => {
+                    swiper.slidePrev();
+                });
+            }); 
 
         },
         slideChangeTransitionEnd: (swiper) => {
@@ -69,7 +91,25 @@ var card = new Swiper(".cardSwiper", {
 
 // Button Introduce Method
 let introduceCallback = (url) => {
-    alert("آدرس در حافظه کلیپ برد ذخیره شد");
+    alert(`آدرس ${url} در حافظه کلیپ برد ذخیره شد.`);
 }
+
+// Set data-courseID in form-step-one Input
+let setCourseID = (setCourseID) => {
+    let setCourseIDInput = document.querySelector(".form-step-one .course-id");
+    setCourseIDInput.value = setCourseID;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 // window.onload = (event) => {};

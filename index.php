@@ -62,25 +62,46 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide main-slide" data-bullet="فرم تماس">
-                                <div class="main-container">
+                            <div class="swiper-slide main-slide" data-hash="three" data-bullet="فرم تماس">
+                                <div class="main-container form-container">
+                                    <div class="form-heading">فرم ثبت نام در کارگاه تفکر انتقادی</div>
+                                    <form method="get" class="fourmind-form form-step-one">
+                                        <input type="text" name="course-id" id="course-id" class="course-id" value="" require>
+                                        <input type="text" name="full-name" id="full-name" class="full-name" value="" require>
+                                        <input type="text" name="job" id="job" class="job" value="" require>
 
+                                        <!-- <input type="submit" value="ارسال"> -->
+                                    </form>
+                                    <div class="form-btn">
+                                        <button class="btn btn-prev">
+                                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.66003 20.4201L16.18 13.9001C16.95 13.1301 16.95 11.8701 16.18 11.1001L9.66003 4.58008" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            مرحله قبل
+                                        </button>
+                                        <button class="btn btn-next">
+                                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15.2501 20.4201L8.73009 13.9001C7.96009 13.1301 7.96009 11.8701 8.73009 11.1001L15.2501 4.58008" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            مرحله بعد
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                             <div class="swiper-slide main-slide" data-bullet="فرم سوالات">
-                                <div class="main-container">
+                                <div class="main-container form-container">
 
                                 </div>
                             
                             </div>
                             <div class="swiper-slide main-slide" data-bullet="هزینه">
-                                <div class="main-container">
+                                <div class="main-container form-container">
 
                                 </div>
                             
                             </div>
                             <div class="swiper-slide main-slide" data-hash="success" data-bullet="تایید نهایی">
-                                <div class="main-container">
+                                <div class="main-container form-container">
 
                                 </div>
                             

@@ -55,7 +55,7 @@
         </dev>
         <div class="links">
             <button class="btn btn-introduce" onclick="introduceCallback('test.com');">معرفی به دوستان</button>
-            <button class="btn btn-register" onclick="">ثبت نام</button>
+            <button class="btn btn-register" data-courseID = "555">ثبت نام</button>
         </div>
     </div>
 </div>

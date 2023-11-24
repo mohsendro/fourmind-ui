@@ -38,6 +38,7 @@ html {
     font-family: "iransans";
     font-size: 16px;
     font-weight: 400;
+    color: #FFFFFF;
     overflow-x: hidden;
 }
 
@@ -45,6 +46,7 @@ body {
     font-family: "iransans";
     font-size: 16px;
     font-weight: 400;
+    color: #FFFFFF;
     overflow-x: hidden;
 }
 
@@ -100,6 +102,48 @@ body {
     object-fit: cover;
 }
 
+.swiper-pagination {
+    z-index: 0;
+}
+
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #FFFFFF;
+    background-color: transparent;
+    margin-top: 10px!important;
+}
+
+.swiper-pagination-bullet-active {
+    position: relative;
+    background-color: #FFFFFF;
+}
+
+.swiper-pagination-bullet-active::after {
+    content: "";
+    width: 25px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: -35px;
+    background-color: #FFFFFF;
+}
+
+.swiper-pagination-bullet-active::before {
+    content: attr(data-before);
+    width: 100%;
+    min-width: max-content;
+    position: absolute;
+    top: -50%;
+    right: 60px;
+    transform: translate(0px, 3px);
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 30px;
+    text-align: right;
+    color: #FFFFFF;
+}
+
 /* Fourmind Styles */
 .fourmind {
     width: 100%;
@@ -150,6 +194,7 @@ body {
     align-items: center;
     gap: 50px;
     /* background: #ffffff30; */
+    z-index: 11;
 }
 
 .primary-desc {
@@ -385,67 +430,38 @@ body {
     background-color: #333333;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.swiper-pagination-bullet {
-    width: 20px;
-    height: 20px;
-    border: 1px solid #FFFFFF;
-    background-color: transparent;
-    margin-top: 10px!important;
-}
-
-.swiper-pagination-bullet-active {
-    position: relative;
-    background-color: #FFFFFF;
-}
-
-.swiper-pagination-bullet-active::after {
-    content: "";
-    width: 25px;
-    height: 1px;
-    position: absolute;
-    top: 50%;
-    left: -35px;
-    background-color: #FFFFFF;
-}
-
-.swiper-pagination-bullet-active::before {
-    content: attr(data-before);
+.form-container {
     width: 100%;
-    min-width: max-content;
-    position: absolute;
-    top: -50%;
-    right: 60px;
-    transform: translate(0px, 3px);
-    font-size: 13px;
-    font-weight: 300;
-    line-height: 30px;
-    text-align: right;
-    color: #FFFFFF;
+    height: 100%;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border-radius: 8px;
+    overflow-y: scroll;
+    padding: 30px 15px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
