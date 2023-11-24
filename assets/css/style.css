@@ -163,7 +163,7 @@ body {
 }
 
 .fourmind .column {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -193,7 +193,6 @@ body {
     justify-content: center;
     align-items: center;
     gap: 50px;
-    /* background: #ffffff30; */
     z-index: 11;
 }
 
@@ -433,6 +432,10 @@ body {
 .form-container {
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 25px;
     background: rgba( 255, 255, 255, 0.15 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 5px );
@@ -442,15 +445,185 @@ body {
     padding: 30px 15px;
 }
 
+.form-heading {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+    border-bottom: 1px solid #FFFFFF10;
+    padding-bottom: 15px;
+}
 
+.form-heading .title {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 25px;
+    text-align: center;
+    color: #FFFFFF;
+}
 
+.form-heading .notic {
+    display: block;
+    width: 100%;
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 25px;
+    text-align: right;
+    color: #FF5858;
+}
 
+.form-heading .notic svg {
+    margin-left: 5px;
+}
 
+.fourmind-form {
+    width: 100%;
+}
 
+.fourmind-form .column {
+    justify-content: flex-start;
+}
 
+.fourmind-form .form-group {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+    margin-bottom: 20px;
+}
 
+.fourmind-form .form-group-radio {
+    flex-direction: row;
+    column-gap: 20px;
+}
 
+.fourmind-form .danger-message {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 25px;
+    text-align: right;
+    color: #FF5858;
+}
 
+.fourmind-form .form-group > legend,
+.fourmind-form .form-group > label {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 25px;
+    text-align: right;
+    color: #FFFFFF;
+}
+
+.fourmind-form legend .star,
+.fourmind-form label .star {
+    color: #FF0000;
+}
+
+.fourmind-form input,
+.fourmind-form textarea {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 25px;
+    text-align: right;
+    color: #FFFFFF;
+    background-color: #ffffff20;
+    border: 1px solid #FFFFFF10;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+.fourmind-form input:focus,
+.fourmind-form textarea:focus {
+    color: #FFFFFF;
+    background-color: #ffffff20;
+    border-color: #FFFFFF50;
+    box-shadow: none;
+}
+
+.fourmind-form .form-check {
+    width: auto;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.fourmind-form .form-check label {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 25px;
+    text-align: right;
+    color: #808080;
+}
+
+.fourmind-form .form-check input {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #808080;
+    padding: 5px;
+}
+
+.fourmind-form .form-check input:checked {}
+
+.form-btn {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    border-top: 1px solid #FFFFFF10;
+    padding-top: 15px;
+}
+
+.btn-prev,
+.btn-next {
+    width: calc(50% - 20px);
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 25px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #ffffff20;
+    border: 1px solid #FFFFFF10;
+    border-radius: 8px;
+    padding: 10px 20px
+}
+
+.btn-prev:hover,
+.btn-next:hover {
+    color: #FFFFFF;
+    background-color: #333333;
+}
 
 
 

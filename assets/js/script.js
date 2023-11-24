@@ -34,12 +34,12 @@ var swiper = new Swiper(".fourmindSwiper", {
                 });
             });
 
-            // Next && Prev Slider By btn-prev && btn-next Button
+            // Next && Prev Slider By btn-next && btn-prev Button
             let btnNext = document.querySelectorAll('.btn-next');
             let btnPrev = document.querySelectorAll('.btn-prev');
             btnNext.forEach((e) => {
                 e.addEventListener("click", () => {
-                    swiper.slideNext();
+                    validateForm(swiper);
                 });
             });
             btnPrev.forEach((e) => {
@@ -91,6 +91,7 @@ var card = new Swiper(".cardSwiper", {
 
 // Button Introduce Method
 let introduceCallback = (url) => {
+    navigator.clipboard.writeText(url);
     alert(`آدرس ${url} در حافظه کلیپ برد ذخیره شد.`);
 }
 
@@ -100,7 +101,101 @@ let setCourseID = (setCourseID) => {
     setCourseIDInput.value = setCourseID;
 }
 
+// Check form-step-one Validation
+let validateForm = (swiper) => {
+    let statusAll = false;
+    let statusFullName = false;
+    let statusJob = false;
+    let statusField = false;
+    let statusTel = false;
+    let statusEmail = false;
+    let statusDate = false;
 
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+	var telPattern = /^0\d{10}$/;
+    let borderError = 'border-color:#FF5858;';
+    let messageError = 'display:inline-block;';
+    
+    let formFeilds = document.querySelector(".form-step-one");
+    let fullName = formFeilds.querySelector(".full-name");
+    let job = formFeilds.querySelector(".job");
+    let field = formFeilds.querySelector(".field");
+    let tel = formFeilds.querySelector(".tel");
+    let email = formFeilds.querySelector(".email");
+    let date = formFeilds.querySelector(".date:checked").value;
+
+    let fullNameValue = fullName.value;
+    let jobValue = job.value;
+    let fieldValue = field.value;
+    let telValue = tel.value;
+    let emailValue = email.value;
+
+    let fullNameMessage = formFeilds.querySelector(".full-name-message");
+    let jobMessage = formFeilds.querySelector(".job-message");
+    let fieldMessage = formFeilds.querySelector(".field-message");
+    let telMessage = formFeilds.querySelector(".tel-message");
+    let emailMessage = formFeilds.querySelector(".email-message");
+
+    if( fullNameValue.trim() === '' ) {
+        fullName.style.cssText = borderError;
+        fullNameMessage.style.cssText = messageError;
+    } else {
+        fullName.removeAttribute("style");
+        fullNameMessage.removeAttribute("style");
+        statusFullName = true;
+    }
+
+    if( jobValue.trim() === '' ) {
+        job.style.cssText = borderError;
+        jobMessage.style.cssText = messageError;
+    } else {
+        job.removeAttribute("style");
+        jobMessage.removeAttribute("style");
+        statusJob = true;
+    }
+
+    if( fieldValue.trim() === '' ) {
+        field.style.cssText = borderError;
+        fieldMessage.style.cssText = messageError;
+    } else {
+        field.removeAttribute("style");
+        fieldMessage.removeAttribute("style");
+        statusField = true;
+    }
+
+    if( telValue.trim() === '' ) {
+        tel.style.cssText = borderError;
+        telMessage.style.cssText = messageError;
+    } else if ( !telPattern.test(telValue) ) {
+        tel.style.cssText = borderError;
+        telMessage.style.cssText = messageError;
+    } else {
+        tel.removeAttribute("style");
+        telMessage.removeAttribute("style");
+        statusTel = true;
+    }
+
+    if( emailValue.trim() === '' ) {
+        email.style.cssText = borderError;
+        emailMessage.style.cssText = messageError;
+    } else if( !emailPattern.test(emailValue) ) {
+        email.style.cssText = borderError;
+        emailMessage.style.cssText = messageError;
+    } else {
+        email.removeAttribute("style");
+        emailMessage.removeAttribute("style");
+        statusEmail = true;
+    }
+
+    if( statusFullName && statusJob && statusField && statusTel && statusEmail ) {
+        statusAll = true;
+    }
+
+    if( statusAll ) {
+        swiper.slideNext();
+    }
+
+}
 
 
 
@@ -113,3 +208,8 @@ let setCourseID = (setCourseID) => {
 
 
 // window.onload = (event) => {};
+
+
+
+
+
