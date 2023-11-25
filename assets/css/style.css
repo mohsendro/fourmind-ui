@@ -591,6 +591,96 @@ body {
 
 .fourmind-form .form-check input:checked {}
 
+.fourmind-form .btn-group {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.fourmind-form .btn-group .btn-default {
+    width: auto;
+    max-width: max-content;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 25px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #FFFFFF20;
+    border: 1px solid #FFFFFF10;
+    border-radius: 8px !important;
+    padding: 5px 10px;
+}
+
+.fourmind-form .btn-group .btn-check:checked+.btn-default {
+    background-color: #FFFFFF80;
+}
+
+.fourmind-form .form-range {}
+
+.fourmind-form .form-range label {}
+
+.fourmind-form .form-range input {}
+
+.fourmind-form .form-range .wallet {}
+
+.advice {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.advice .title {
+    width: 100%;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 25px;
+    text-align: right;
+    color: #D6FF93;
+    margin-bottom: 10px;
+}
+
+.advice .desc {
+    width: 100%;
+    display: block;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 25px;
+    text-align: right;
+    color: #FFFFFF
+}
+
+.advice ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+}
+
+.advice li {
+    width: 100%;
+    display: block;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 25px;
+    text-align: right;
+    color: #FFFFFF;
+}
+
 .form-btn {
     width: 100%;
     display: flex;
@@ -624,26 +714,6 @@ body {
     color: #FFFFFF;
     background-color: #333333;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .logo-desktop {
     width: auto;
