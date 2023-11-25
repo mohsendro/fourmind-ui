@@ -1,7 +1,6 @@
 // Initialize Swiper
 var swiper = new Swiper(".fourmindSwiper", {
-    direction: "vertical",
-    // allowTouchMove: false,
+    allowTouchMove: false,
     pagination: {
       el: ".swiper-pagination",
       clickable: false,
@@ -56,6 +55,26 @@ var swiper = new Swiper(".fourmindSwiper", {
             bulletContent.setAttribute('data-before', currentSlide);
         },
     },
+    breakpoints: {
+        0: {
+            direction: "horizontal",
+        },
+        576: {
+            direction: "horizontal",
+        },
+        768: {
+            direction: "vertical",
+        },
+        992: {
+            direction: "vertical",
+        },
+        1200: {
+            direction: "vertical",
+        },
+        1400: {
+            direction: "vertical",
+        },
+    }
 });
 
 var card = new Swiper(".cardSwiper", {
@@ -197,19 +216,9 @@ let validateForm = (swiper) => {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-// window.onload = (event) => {};
-
-
-
-
-
+let rangeCallback = (event) => {
+    var wallet = document.querySelector(".wallet");
+    var price = wallet.querySelector(".price");
+    var rangeValue = document.querySelector('.range').value;
+    price.innerHTML = rangeValue + " تومان";
+}
