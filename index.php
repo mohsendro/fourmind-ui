@@ -394,7 +394,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide main-slide" data-hash="eight" data-bullet="هزینه">
+                            <div class="swiper-slide main-slide" data-hash="test" data-bullet="هزینه">
                                 <div class="main-container form-container">
                                     <div class="form-heading">
                                         <h2 class="title">فرم ثبت نام در کارگاه تفکر انتقادی</h2>
@@ -409,9 +409,6 @@
                                         <div class="row">
                                             <div class="col-12 column">
                                                 <div class="form-group">
-                                                    <label for="textarea8">چرا به مدیریت پروژه‌های برگزاری رویداد علاقه داری؟‌</label>
-                                                    <textarea name="textarea8" id="textarea8" class="form-control textarea textarea8" rows="2"></textarea>
-
                                                     <div class="form-range">
                                                         <label for="range" class="form-label">
                                                             هزینه کارگاه رو خودت انتخاب کن
@@ -419,7 +416,7 @@
                                                                 <path d="M15.2501 20.4201L8.73009 13.9001C7.96009 13.1301 7.96009 11.8701 8.73009 11.1001L15.2501 4.58008" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                                             </svg>
                                                         </label>
-                                                        <input type="range" name="range" id="range" class="range" min="1000" max="1000000">
+                                                        <input type="range" name="range" id="range" class="range" min="1000" max="1000000" onchange="alert('asdas');">
                                                         <div class="wallet">
                                                             ۱۰۰‌٫۰۰۰ تومان
                                                             <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
